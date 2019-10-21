@@ -1,0 +1,16 @@
+Estados
+3
+a b c
+
+Estados de aceptación
+1
+c
+
+Alfabeto
+2
+0 1
+
+Transiciones
+2
+a 0 b
+a 0 c

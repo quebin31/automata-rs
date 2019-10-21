@@ -1,0 +1,18 @@
+Estados
+0 = { a }
+1 = { b c }
+2 = { ! }
+
+Estados de aceptación
+1 
+
+Alfabeto
+0 1 
+
+Transiciones
+0 0 1
+0 1 2
+1 0 2
+1 1 2
+2 0 2
+2 1 2
