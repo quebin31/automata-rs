@@ -45,6 +45,14 @@ impl Automata {
         Default::default()
     }
 
+    pub fn len(&self) -> usize {
+        self.states.len()
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.states.is_empty()
+    }
+
     pub fn find(&self, state: &State) -> Option<usize> {
         for (index, s) in self.states.iter().enumerate() {
             if s == state {
@@ -200,7 +208,7 @@ impl Automata {
         }
 
         afd_automata.push_state("!".into());
-        let never_state_index = afd_automata.find(&"!".into()).unwrap();
+        let never_state_index = afd_automata.len() - 1;
         for state_transition in &mut afd_automata.transitions {
             if state_transition.len() == afd_automata.alphabet.len() {
                 continue;
